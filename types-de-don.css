@@ -1,0 +1,183 @@
+/* Bannière Spécifique */
+.hero-types {
+    background: linear-gradient(rgba(98, 102, 123, 0.8), rgba(81, 74, 97, 0.8)), url('../../assets/images/action1.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.hero-types h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Sections */
+.dons-section {
+    padding: 5rem 0;
+}
+
+.dons-section.financial {
+    background-color: #f8f9fa;
+}
+
+.dons-section.material {
+    background-color: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+/* Grille de dons */
+.dons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.don-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.don-card.highlight {
+    border: 2px solid var(--accent-color);
+}
+
+.don-card:hover {
+    transform: translateY(-10px);
+}
+
+.don-icon {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.don-card h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.don-features {
+    margin-bottom: 2rem;
+}
+
+.don-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.don-features i {
+    color: var(--accent-color);
+    margin-right: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.don-info {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #eee;
+    font-size: 0.9rem;
+}
+
+.don-info i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.recommended {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* CTA */
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.cta-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-types h1 {
+        font-size: 2.2rem;
+    }
+    
+    .dons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .don-card {
+        padding: 1.5rem;
+    }
+}
