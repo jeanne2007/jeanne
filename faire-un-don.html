@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire un Don | UpcDonat</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/faire-un-don.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Upc<span>Donat</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="nos-actions.html">Nos Actions</a></li>
+                <li><a href="faire-un-don.html" class="active">Faire un Don</a></li>
+                <li><a href="types-de-don.html">Types de Don</a></li>
+                <li><a href="comment-aider.html">Comment Aider ?</a></li>
+                <li><a href="devenir-benevole.html">Devenir Bénévole</a></li>
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bannière -->
+    <section class="hero-don">
+        <div class="container">
+            <h1>Votre Don Fait la Différence</h1>
+            <p>Chaque contribution compte pour soutenir les enfants et veuves de Kinshasa.</p>
+        </div>
+    </section>
+
+    <!-- Options de Don -->
+    <section class="options-don">
+        <div class="container">
+            <h2><i class="fas fa-hand-holding-heart"></i> Que Peut Votre Don Offrir ?</h2>
+            <div class="options-grid">
+                <!-- Option 1 -->
+                <div class="option-card" data-montant="10">
+                    <div class="option-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>10$</h3>
+                    <p>Offre 1 repas quotidien à un enfant pendant 1 semaine</p>
+                    <button class="btn-select">Sélectionner</button>
+                </div>
+                
+                <!-- Option 2 -->
+                <div class="option-card" data-montant="30">
+                    <div class="option-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>30$</h3>
+                    <p>Finance 1 kit scolaire complet (cahiers, stylos, uniforme)</p>
+                    <button class="btn-select">Sélectionner</button>
+                </div>
+            
+                <!-- Option 3 -->
+                <div class="option-card" data-montant="50">
+                    <div class="option-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>50$</h3>
+                    <p>Contribue au loyer mensuel d'une veuve</p>
+                    <button class="btn-select">Sélectionner</button>
+                </div>
+                
+                <!-- Option Personnalisée -->
+                <div class="option-card custom">
+                    <div class="option-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Montant Libre</h3>
+                    <p>Choisissez le montant qui vous convient</p>
+                    <input type="number" placeholder="$" min="1" class="custom-input">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de Don -->
+    <section class="formulaire-don">
+        <div class="container">
+            <form id="donForm">
+                <h2><i class="fas fa-credit-card"></i> Informations de Don</h2>
+                
+                <!-- Montant -->
+                <div class="form-group">
+                    <label for="montant">Montant (€)</label>
+                    <input type="number" id="montant" name="montant" min="1" required>
+                </div>
+                
+                <!-- Fréquence -->
+                <div class="form-group">
+                    <label>Fréquence</label>
+                    <div class="radio-group">
+                        <label class="radio-btn">
+                            <input type="radio" name="frequence" value="ponctuel" checked>
+                            <span>Don ponctuel</span>
+                        </label>
+                        <label class="radio-btn">
+                            <input type="radio" name="frequence" value="mensuel">
+                            <span>Don mensuel</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Méthode de Paiement -->
+                <div class="form-group">
+                    <label>Méthode de Paiement</label>
+                    <div class="paiement-methods">
+                        <!-- Mobile Money -->
+                        <label class="method-btn">
+                            <input type="radio" name="paiement" value="mobile_money" required>
+                            <div class="method-content">
+                                <img src="../assets/images/money.jpg" alt="Mobile Money">
+                                <span>Mobile Money (Vodacom, Airtel, Orange)</span>
+                            </div>
+                        </label>
+                        
+                        <!-- Carte Bancaire -->
+                        <label class="method-btn">
+                            <input type="radio" name="paiement" value="carte">
+                            <div class="method-content">
+                                <img src="../assets/images/bancaire2.jpg" alt="Carte Bancaire">
+                                <span>Carte Visa/Mastercard</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message (optionnel)</label>
+                    <textarea id="message" placeholder="Un mot d'encouragement..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Confirmer le Don <i class="fas fa-lock"></i></button>
+            </form>
+            
+            <!-- Confirmation (cachée par défaut) -->
+            <div id="confirmation" class="confirmation">
+                <i class="fas fa-check-circle"></i>
+                <h3>Merci pour votre générosité !</h3>
+                <p id="confirmation-text"></p>
+                <a href="../index.html" class="btn">Retour à l'accueil</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Colonne 1 -->
+                <div class="footer-col">
+                    <h4>Solidarité Étudiante</h4>
+                    <p>Plateforme de sensibilisation et de collecte de dons par les étudiants, pour les veuves et sans-abri.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Colonne 2 -->
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="pages/nos-actions.html">Nos Actions</a></li>
+                        <li><a href="pages/faire-un-don.html">Faire un Don</a></li>
+                        <li><a href="pages/devenir-benevole.html">Bénévolat</a></li>
+                        <li><a href="pages/about.html">Transparence</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 3 -->
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@solidarite-etudiante.org</li>
+                        <li><i class="fas fa-phone"></i> +243 812 475 527</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Avenue de libération Lingwala, Kinshasa</li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 4 -->
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Abonnez-vous pour suivre nos actions.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Solidarité Étudiante (Upc Donat). Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/faire-un-don.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
