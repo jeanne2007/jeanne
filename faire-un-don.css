@@ -1,0 +1,283 @@
+/* Bannière Spécifique */
+.hero-don {
+    background: linear-gradient(rgba(94, 99, 124, 0.8), rgba(96, 83, 125, 0.8)), url('../../assets/images/action3.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.hero-don h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Options de Don */
+.options-don {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.options-don h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+    font-size: 2.2rem;
+}
+
+.options-don h2 i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.option-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-card.custom {
+    background-color: rgba(67, 97, 238, 0.05);
+    border: 2px dashed var(--primary-color);
+}
+
+.option-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.option-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+}
+
+.option-card p {
+    color: var(--gray-color);
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+}
+
+.btn-select {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-select:hover {
+    background-color: var(--secondary-color);
+}
+
+.custom-input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Formulaire */
+.formulaire-don {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.formulaire-don h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+
+.formulaire-don h2 i {
+    color: var(--accent-color);
+    margin-right: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-btn input {
+    margin-right: 0.5rem;
+}
+
+.radio-btn span {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.radio-btn input:checked + span {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.paiement-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.method-btn {
+    display: block;
+    cursor: pointer;
+}
+
+.method-btn input {
+    display: none;
+}
+
+.method-content {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.method-btn input:checked + .method-content {
+    border-color: var(--primary-color);
+    background-color: rgba(67, 97, 238, 0.05);
+}
+
+.method-content img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.method-content span {
+    display: block;
+    font-size: 0.9rem;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #ff0676;
+}
+
+.btn-submit i {
+    margin-left: 0.5rem;
+}
+
+/* Confirmation */
+.confirmation {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 2rem;
+    display: none;
+}
+
+.confirmation i {
+    font-size: 4rem;
+    color: var(--success-color);
+    margin-bottom: 1.5rem;
+}
+
+.confirmation h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.confirmation p {
+    margin-bottom: 2rem;
+    color: var(--gray-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .paiement-methods {
+        grid-template-columns: 1fr;
+    }
+}
