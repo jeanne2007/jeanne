@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | UpcDonat</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS pour la carte -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Upc<span>Donat</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="nos-actions.html">Nos Actions</a></li>
+                <li><a href="faire-un-don.html">Faire un Don</a></li>
+                <li><a href="types-de-don.html">Types de Don</a></li>
+                <li><a href="comment-aider.html">Comment Aider ?</a></li>
+                <li><a href="devenir-benevole.html">Devenir Bénévole</a></li>
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bannière -->
+    <section class="hero-contact">
+        <div class="container">
+            <h1>Contactez Notre Équipe</h1>
+            <p>Nous sommes à votre écoute pour toute question ou partenariat</p>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Formulaire -->
+                <div class="contact-form">
+                    <h2><i class="fas fa-paper-plane"></i> Envoyez un Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom Complet*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet*</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Sélectionnez un sujet</option>
+                                <option value="don">Question sur les dons</option>
+                                <option value="benevolat">Bénévolat</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message*</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Envoyer <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    
+                    <!-- Confirmation (cachée par défaut) -->
+                    <div id="confirmation" class="confirmation">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message envoyé avec succès !</h3>
+                        <p>Nous vous répondrons dans les 48 heures.</p>
+                    </div>
+                </div>
+                
+                <!-- Infos Contact -->
+                <div class="contact-info">
+                    <h2><i class="fas fa-info-circle"></i> Nos Coordonnées</h2>
+                    <div class="info-card">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Adresse</h3>
+                                <p>Avenue de libération Lingwala<br>Kinshasa, République Démocratique du Congo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Téléphone</h3>
+                                <p>+243 812 475 527</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>contact@upcdonat.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horaires</h3>
+                                <p>Lundi-Vendredi : 8h-17h<br>Samedi : 9h-13h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Suivez-Nous</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carte -->
+            <div class="map-container">
+                <h2><i class="fas fa-map-marked-alt"></i> Localisation</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Colonne 1 -->
+                <div class="footer-col">
+                    <h4>Solidarité Étudiante</h4>
+                    <p>Plateforme de sensibilisation et de collecte de dons par les étudiants, pour les veuves et sans-abri.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Colonne 2 -->
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li><a href="pages/nos-actions.html">Nos Actions</a></li>
+                        <li><a href="pages/faire-un-don.html">Faire un Don</a></li>
+                        <li><a href="pages/devenir-benevole.html">Bénévolat</a></li>
+                        <li><a href="pages/about.html">Transparence</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 3 -->
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@solidarite-etudiante.org</li>
+                        <li><i class="fas fa-phone"></i> +243 812 475 527</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Avenue de libération Lingwala, Kinshasa</li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 4 -->
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Abonnez-vous pour suivre nos actions.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Solidarité Étudiante (Upc Donat). Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Leaflet JS pour la carte -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../assets/js/contact.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
